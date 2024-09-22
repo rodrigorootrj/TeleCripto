@@ -12,4 +12,4 @@ https://docs.google.com/spreadsheets/d/1RMFehQBKfpRaN4JXi90fbJNhylmMExpV-FSi9jUK
 ---------
 Grupo: TeleCripto
 # Apresentação:
-youtube.com
+https://youtube.com/{}.format(var)
