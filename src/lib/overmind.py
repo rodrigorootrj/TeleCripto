@@ -1,0 +1,3 @@
+class Overmind:
+    def main():
+        ...
