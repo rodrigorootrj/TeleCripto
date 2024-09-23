@@ -14,7 +14,7 @@ build:
 push:
 run:
 shell:
-	@docker run -it --rm --name ${LABEL} --mount type=bind,source=${DIR}/src,target=/app/ --entrypoint /bin/bash ${TAG}
+	@docker run -it --rm --name ${LABEL} --mount type=bind,source=${DIR}/src,target=/app/ -e TELECRIPTO_TELEGRAM_TOKEN=$$TELECRIPTO_TELEGRAM_TOKEN -e TELECRIPTO_TELEGRAM_GROUP=$$TELECRIPTO_TELEGRAM_GROUP --entrypoint /bin/bash ${TAG}
 ## deploy	
 compose:
 	@docker compose up -d

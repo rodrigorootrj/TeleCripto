@@ -6,15 +6,13 @@ config = configparser.ConfigParser()
 config.read('etcd/app.config')
 ##
 token = config.get('default', 'token')
-url = config.get('default', 'url')
-wtoken = config.get('worker', 'token')
+group = config.get('default', 'group')
 ###
 ## Criando um objeto com as credenciais.
 class ArtifactConfig:
     def objMain():
         artefato = {
-            'token' : os.environ.get('LOCAL_TOKEN', token),
-            'url' : url,
-            'pop_url' : wtoken
+            'token' : os.environ.get('TELECRIPTO_TELEGRAM_TOKEN', token),
+            'group' : os.environ.get('TELECRIPTO_TELEGRAM_GROUP', group),
             }
         return artefato

@@ -1,7 +1,12 @@
-
+from lib.telegram import Telegram
+from lib.config import ArtifactConfig
 import time
 def run():
-    print('WORK')
+    texto = 'WORK'
+    value = ArtifactConfig.objMain()  
+    token = value['token']
+    group = value['group']
+    Telegram.sendMessage(texto,token,group)
     time.sleep(60)
     return 200
 
